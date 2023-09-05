@@ -8,12 +8,14 @@
 </head>
 <body>
     <main>iffy</main>
+    <img id="notGit" src="https://picsum.photos/id/343/200/300" alt="image displayed because not github pages" style="display: none;"></img>
+    <img id="Git" src="https://picsum.photos/id/200/200/300" alt="image displayed because ON github pages" style="display: none;"></img>
     <script> 
-    if (window.location.host.includes("github.io")) {
-        <img src="https://picsum.photos/id/343/200/300" alt="image displayed because not github pages"></img>
-    } else {
-        <img src="https://picsum.photos/id/200/200/300" alt="image displayed because ON github pages"></img>
-    }
+        if (window.location.host.includes("github.io")) {
+            document.getElementById("notGit").style.display = "block";
+        } else {
+            document.getElementById("Git").style.display = "block";
+        }
     </script>
     <p>hello</p>
 </body>
